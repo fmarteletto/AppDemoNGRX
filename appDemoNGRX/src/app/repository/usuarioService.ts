@@ -16,24 +16,23 @@ export class UsuarioService {
     }
     
     public getUSuario(id: number) {
-        return this.httpClient.get(BASEPATH + '/' + id);
+        return this.httpClient.get<UsuarioModel>(BASEPATH + '/' + id);
 
     }
 
     public addUSuario(usuario: UsuarioModel) {
         let header = new HttpHeaders();
         header = header.set('Content-Type', 'application/json; charset=utf-8');
-        return this.httpClient.post(BASEPATH, JSON.stringify(usuario), { headers: header });
+        return this.httpClient.post<UsuarioModel>(BASEPATH, JSON.stringify(usuario), { headers: header });
     }
 
     public updateUSuario(usuario: UsuarioModel) {
         let header = new HttpHeaders();
         header = header.set('Content-Type', 'application/json; charset=utf-8');
-        return this.httpClient.put(BASEPATH + '/' + usuario.id, JSON.stringify(usuario), { headers: header });
+        return this.httpClient.put<UsuarioModel>(BASEPATH + '/' + usuario.id, JSON.stringify(usuario), { headers: header });
     }
     
     public deleteUSuario(usuario: UsuarioModel) {
-
         let header = new HttpHeaders();
         header = header.set('Content-Type', 'application/json; charset=utf-8');
         return this.httpClient.delete(BASEPATH + '/' + usuario.id, { headers: header });

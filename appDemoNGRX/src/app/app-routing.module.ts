@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { UsuariosModule } from './usuarios/usuarios.module';
+import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
+  {path: '', component : IndexComponent },
   {path : 'usuarios' , loadChildren : () => import('./usuarios/usuarios.module').then(m=> m.UsuariosModule) } 
 ];
 
