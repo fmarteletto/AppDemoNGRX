@@ -32,10 +32,10 @@ export class UsuarioService {
         return this.httpClient.put<UsuarioModel>(BASEPATH + '/' + usuario.id, JSON.stringify(usuario), { headers: header });
     }
     
-    public deleteUSuario(usuario: UsuarioModel) {
+    public deleteUSuario(usuario: Number) {
         let header = new HttpHeaders();
         header = header.set('Content-Type', 'application/json; charset=utf-8');
-        return this.httpClient.delete(BASEPATH + '/' + usuario.id, { headers: header });
+        return this.httpClient.delete(BASEPATH + '/' + usuario, { headers: header });
 
     }
 }

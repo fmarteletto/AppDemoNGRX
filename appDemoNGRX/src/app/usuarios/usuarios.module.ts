@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GeneralInfoComponent } from './general-info/general-info.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     ListComponent,
-    CreateComponent
+    CreateComponent,
+    GeneralInfoComponent
   ],
   imports: [
     CommonModule,

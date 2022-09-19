@@ -1,35 +1,51 @@
 <div class="row">
-    <div class="col-12">
-        <div class="row"> 
-            <div class="text-center shadow-sm p-3 mb-5 bg-body rounded">Cadastro de Usuario</div>
-        </div>
-        <div class="row">
+  <div class="col-12">
+    <div class="row">
+      <div class="text-center shadow-sm p-3 mb-5 bg-body rounded">Cadastro de Usuario</div>
+    </div>
+    <div class="row">
 
-            <form [formGroup]="formUsuario" (submit)="send()">
-                <div hidden class="mb-3">
-                  <label for="id" class="form-label">ID</label>
-                  <input formControlName="id" type="number" class="form-control" id="id">
-                </div>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input formControlName="name" type="text" class="form-control" id="name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="perfil" class="form-label">Perfil</label>
-                    <input formControlName="perfil" type="text" class="form-control" id="perfil">
-                  </div>
-                  <div class="mb-3">
-                    <label for="age" class="form-label">Idade</label>
-                    <input formControlName="age" type="number" class="form-control" id="age">
-                  </div>
-                <button type="submit" [disabled]="formUsuario.invalid" class="btn btn-primary">Salvar</button>
-              </form>
-    
-        </div>
+      <div class="col-8">
+        <form [formGroup]="formUsuario" (submit)="send()">
+          <div hidden class="mb-3 col-10">
+            <label for="id" class="form-label">ID</label>
+            <input formControlName="id" type="number" class="form-control" id="id" >
+          </div>
+          <div class="mb-3 col-10">
+            <label for="name" class="form-label">Nome</label>
+            <input formControlName="name" type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3 col-10">
+            <label for="perfil" class="form-label">Perfil</label>
+            <select class="form-select" aria-label="Default select example" formControlName="perfil">
+              <option value="Administrador">Administrador</option>
+              <option value="Administrador">Supervisor</option>
+              <option value="Administrador">Usuario</option>
+            </select>
+          </div>
+          <div class="mb-3 col-10">
+            <label for="age" class="form-label">Idade</label>
+            <input formControlName="age" type="number" class="form-control" id="age">
+          </div>
+          <button type="submit" [disabled]="formUsuario.invalid" class="btn btn-primary">Salvar</button>
+        </form>
+
+      </div>
+
+      <div class="col-4 text-center">
+
+        <app-general-info></app-general-info>
+
+      </div>
+
 
     </div>
 
+  </div>
+
 </div>
 
-
-  
+<div class="text-center shadow-sm p-3 mb-5 mt-5 bg-body rounded">Usuarios Cadastrados</div>
+<div class="row pt-3 pb-3">
+  <app-list></app-list>
+</div>

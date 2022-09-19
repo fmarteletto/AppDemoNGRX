@@ -1,0 +1,29 @@
+<div class="row mb-1 mt-1">
+    <div  class="card text-center">
+      <div class="card-body">
+        Perfil Administrador .: {{ userAdmin$ | async }}
+      
+      </div>
+    </div>
+  </div>
+  <div class="row mb-1 mt-1">
+    <div  class="card text-center">
+      <div class="card-body">
+        Perfil Supervisor .: {{ userSuper$ | async  }}        
+      </div>
+    </div>
+  </div>
+  <div class="row mb-1 mt-1">
+    <div  class="card text-center">
+      <div class="card-body">
+        Perfil Usuario .: {{ user$ | async  }}      
+      </div>
+    </div>
+  </div>
+  <div class="row mb-1 mt-1">
+    <div  class="card text-center">
+      <div class="card-body">
+        Demais Perfis .: {{ userInvalid$ | async }}         
+      </div>
+    </div>
+  </div>

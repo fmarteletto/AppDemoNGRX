@@ -1,23 +1,27 @@
 <div class="row">
     <div class="col-12">
 
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th class="table-danger" scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Perfil</th>
                     <th scope="col">Age</th>
-                    <th scope="col"></th>
+                    <th scope="col" class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let usuario of this.listUsuarios">
+                <tr *ngFor="let usuario of this.listUsuarios$ | async">
                     <th class="table-danger" scope="row">{{usuario.id}}</th>
                     <td>{{usuario.name}}</td>
                     <td>{{usuario.perfil}}</td>
                     <td>{{usuario.age}}</td>
-                    <td><button (click)="edit(usuario)" class="btn btn-primary" >Editar</button></td>
+                    <td class="text-center">
+                        <button (click)="edit(usuario)" class="btn btn-primary" >Editar</button>
+                        <button (click)="removeUser(usuario)" class="btn btn-danger" >Remover</button>
+                        
+                    </td>
                 </tr>
             </tbody>
         </table>

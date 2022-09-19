@@ -2,9 +2,9 @@
   "usuarios": [
     {
       "id": 1,
-      "name": "Flavio",
-      "perfil": "Admin",
-      "age": 30
+      "name": "Flavio Marteletto",
+      "perfil": "Administrador",
+      "age": 33
     },
     {
       "id": 2,
@@ -37,16 +37,10 @@
       "age": 36
     },
     {
-      "id": 7,
-      "name": "Marcelo",
-      "perfil": "Admin",
-      "age": 56
-    },
-    {
       "id": 8,
-      "name": "Marcio",
-      "perfil": "Usuario",
-      "age": 50
+      "name": "Antonio",
+      "perfil": "Administrador",
+      "age": 2222
     }
   ]
 }
